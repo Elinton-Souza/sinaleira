@@ -1,19 +1,31 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #888;
+  border-radius: 9px;
 }
 
 .obs {
-  font-size: small;
+  font-size: smaller;
   font-style: italic;
   color: rgb(70, 62, 20);
 }
 
 img {
   cursor: pointer;
+  border-radius: 9px;
+  height: 250px;
 }
 
+.estilo-vermelha{
+  color: red;
+}
+
+.estilo-verde{
+  color: green;
+}
+
+.estilo-amarela{
+  color: yellow;
+}

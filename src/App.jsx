@@ -4,25 +4,20 @@ import './App.css'
 
 function App() {
   const [cor, setCor] = useState("vermelha");
-  const mensagen = {
-    vermelha: "PARE!",
-    amarela: "ATENÇÃO!",
-    verde: "SIGA!"
-  };
+  const [mensa, setMensa] = useState( "PARE!!!" );
+  
 
-  const cores = {
-  vermelha: "red",
-  amarela: "yellow",
-  verde: "green" 
-};
 
   function trocaSinaleira() {
-    if (cor === "vermelha") {
+    if (cor == "vermelha") {
       setCor("amarela");
-    } else if (cor === "amarela") {
+      setMensa(`ATENÇÃO`)
+    } else if (cor == "amarela") {
       setCor("verde");
+      setMensa(`Siga em frente`)
     } else {
       setCor("vermelha");
+      setMensa(`PARE!!!!`)
     }
   }
 
@@ -33,7 +28,7 @@ function App() {
     <hr />
     
     <img src={`${cor}.png`}alt="Sinaleira" onClick={trocaSinaleira}/>
-    <h3 style={{ color: cores[cor] }}>{mensagen[cor]}</h3>
+    <h3 className={`estilo-${cor}`}>{mensa}</h3>
     <p className='obs'>Obs.: Clique sobre a imagem para trocar o sinal</p>
     </>
   )
